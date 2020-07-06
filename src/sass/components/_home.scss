@@ -3,6 +3,26 @@
   flex-direction: column;
   background-color: #111;
 
+  &-loading {
+    position: fixed;
+    background-color: $white;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(0rem);
+
+    animation: moveOutTop 1s ease-out 1s;
+    animation-fill-mode: backwards;
+
+    & img {
+      height: 50% !important;
+    }
+  }
+
   &-hero {
     position: relative;
 
@@ -25,7 +45,7 @@
       font-size: 10rem;
       color: $white;
 
-      animation: moveInTop 1.5s ease 0.5s;
+      animation: moveInTop 1.5s ease 1.25s;
       animation-fill-mode: backwards;
 
       transition: all 0.4s ease;
@@ -42,7 +62,7 @@
       font-weight: 700;
       background-color: $accent;
 
-      animation: moveInBottom 1s ease 0.75s;
+      animation: moveInBottom 1s ease 1.5s;
       animation-fill-mode: backwards;
 
       transition: all 0.4s ease;

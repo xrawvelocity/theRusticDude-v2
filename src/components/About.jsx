@@ -22,9 +22,6 @@ export default class About extends Component {
             className="home-image1"
           />
         </section>
-        {/* <h1 className="about-text">We are a small business based in Miami, FL</h1>
-        <h1 className="about-text">We buy our wood from The Home Depot</h1>
-        <h1 className="about-text">We deliver straight to your home</h1> */}
       </div>
     );
   }

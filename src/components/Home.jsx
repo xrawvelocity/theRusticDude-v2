@@ -16,7 +16,9 @@ export default class Home extends Component {
             <source src="./videos/therusticwebsite.mp4" type="video/mp4" />
           </video>
           <div className="home-hero-cta">
-            <h1 className="home-hero-title">Custom <span>Rustic</span> Furniture</h1>
+            <h1 className="home-hero-title">
+              Custom <span>Rustic</span> Furniture
+            </h1>
             <Link to="/about" class="home-hero-button">
               Learn More
             </Link>
