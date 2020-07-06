@@ -9,7 +9,7 @@ export default class Contact extends Component {
     return (
       <section style={{ margin: "20rem 0 0" }} className="home-contact">
         <h4 className="home-contact-title">
-          So what will it be? A chair, a table, or something else?
+          For any inquiries do not hesitate to react out!
         </h4>
         <form
           class="home-contact-form"

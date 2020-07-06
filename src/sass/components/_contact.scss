@@ -166,7 +166,7 @@
 
     &-button {
       background-color: $accent;
-      color: $white;
+      color: $black;
       font-size: 3rem;
       border-radius: 3px;
       border: none;
@@ -178,7 +178,7 @@
 
       &:hover {
         background-color: $accent;
-        color: #fff;
+        color: #000;
         cursor: pointer;
       }
     }

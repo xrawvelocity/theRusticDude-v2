@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Contact from "./Contact";
 
 export default class Home extends Component {
   componentDidMount() {
@@ -10,30 +11,18 @@ export default class Home extends Component {
     return (
       <div className="home">
         <div className="home-hero">
+          <div class="scroll-down"></div>
           <video className="home-hero-video" autoPlay loop muted>
             <source src="./videos/therusticwebsite.mp4" type="video/mp4" />
           </video>
           <div className="home-hero-cta">
-            <h1 className="home-hero-title">Custom Rustic Furniture</h1>
-            <Link to="/about" class="home-hero-button">Learn More</Link>
-          </div>
-        </div>
-        <section className="home-main">
-          <div className="home-cta">
-            <div className="home-cta_text">
-              Hello. My name is Manuel and I craft beautiful furniture from wood
-              for stylish people, like you.
-            </div>
-            <Link to="/about" className="home-cta_button">
-              Learn more about me
+            <h1 className="home-hero-title">Custom <span>Rustic</span> Furniture</h1>
+            <Link to="/about" class="home-hero-button">
+              Learn More
             </Link>
           </div>
-          <img
-            src="../images/detail.png"
-            alt="detail"
-            className="home-image1"
-          />
-        </section>
+        </div>
+
         <div className="home-divisor"></div>
         <section className="home-main">
           <img src="../images/carry.jpg" alt="carry" className="home-image2" />
@@ -64,59 +53,7 @@ export default class Home extends Component {
             className="home-image1"
           />
         </section>
-        <section className="home-contact">
-          <h4 className="home-contact-title">
-            So what will it be? A chair, a table, or something else?
-          </h4>
-          <form
-            class="home-contact-form"
-            action="https://formspree.io/xqkyqkad"
-            method="POST"
-          >
-            <div class="home-contact-form-group">
-              <input
-                class="home-contact-form-group__input"
-                type="text"
-                placeholder=""
-                name="name"
-                id="name"
-                required
-              />
-              <label class="home-contact-form-group__label" for="name">
-                Name
-              </label>
-            </div>
-
-            <div class="home-contact-form-group">
-              <input
-                class="home-contact-form-group__input"
-                type="email"
-                placeholder=""
-                name="_replyto"
-                id="email"
-                required
-              />
-              <label class="home-contact-form-group__label" for="email">
-                Email
-              </label>
-            </div>
-
-            <div class="home-contact-form-group">
-              <input
-                class="home-contact-form-group__input"
-                name="message"
-                placeholder=""
-                id="message"
-              />
-              <label class="home-contact-form-group__label" for="message">
-                Message
-              </label>
-            </div>
-            <button class="home-contact-form-button" type="submit">
-              Submit
-            </button>
-          </form>
-        </section>
+        <Contact />
       </div>
     );
   }

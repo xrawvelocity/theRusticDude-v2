@@ -12,8 +12,9 @@
   }
 
   &-video {
-      width: 530px;
-      height: 300px;
+      width: 70%;
+      height: 60rem;
+      margin-bottom: 10rem;
 
       @include respond (phone) {
         width: 90vw;

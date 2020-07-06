@@ -31,6 +31,16 @@ const data = [
     title: "Is your furniture fit for the outdoors?",
     paragraph: "Yes it is! We use a UV and water protecting coat on all our works.",
   },
+  {
+    title: "Where is your business based?",
+    paragraph: "We are currently working in Miami, FL",
+  },
+  {
+    title: "Will you deliver the furniture to my home?",
+    paragraph: "Of couse! We want your experience to be flawless.",
+  },
+  
+  
 ];
 
 class Accordion extends React.Component {
