@@ -16,6 +16,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      margin-left: 3rem;
       transform: translate(-50%, -50%);
     }
 
@@ -23,16 +24,45 @@
       text-align: start;
       font-size: 10rem;
       color: $white;
+
+      animation: moveInTop 1.5s ease 0.5s;
+      animation-fill-mode: backwards;
+
+      transition: all 0.4s ease;
     }
 
     &-button {
       margin-top: 5rem;
-      width: 35%;
       font-size: 5rem;
       padding: .5rem 1.5rem;
+      border: none;
       border-radius: 4px;
       font-weight: 700;
-      background-color: $white;
+      background-color: $accent;
+
+      animation: moveInBottom 1s ease 0.75s;
+      animation-fill-mode: backwards;
+
+      transition: all 0.4s ease;
+
+      &,
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: #111;
+      }
+
+      &:hover {
+        background-color: $lightaccent;
+        color: #000;
+        cursor: pointer;
+      }
+
+      &::before,
+      &::after {
+        clear: both;
+        display: none;
+      }
     }
 
     &-video {
@@ -47,6 +77,7 @@
     display: flex;
     justify-content: space-around;
     height: 70vh;
+    padding: 0 10%;
 
     @include respond(phone) {
       font-weight: 800;
@@ -122,12 +153,12 @@
       &:link,
       &:visited {
         text-decoration: none;
-        color: $white;
+        color: #111;
       }
 
       &:hover {
         background-color: $lightaccent;
-        color: #fff;
+        color: #000;
         cursor: pointer;
       }
 

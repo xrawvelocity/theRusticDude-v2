@@ -15,7 +15,7 @@ export default class Home extends Component {
           </video>
           <div className="home-hero-cta">
             <h1 className="home-hero-title">Custom Rustic Furniture</h1>
-            <button class="home-hero-button">Learn More</button>
+            <Link to="/about" class="home-hero-button">Learn More</Link>
           </div>
         </div>
         <section className="home-main">
