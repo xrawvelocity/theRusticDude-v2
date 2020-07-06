@@ -7,7 +7,6 @@
   top: 0;
   width: 100%;
   z-index: 10000000;
-  background-color: darken(rgba($white, 0.9), 3);
 
   animation: moveInTop 1s ease 0.5s;
   animation-fill-mode: backwards;
@@ -45,6 +44,9 @@
 
     &_image {
       transform: scale(0.5);
+      background-color: $white;
+      border-radius: 50%;
+      margin-right: 3rem;
       @include respond(phone) {
         transform: scale(0.4);
       }
@@ -57,6 +59,7 @@
       height: 200px;
       transform: scale(1);
       margin-left: -5rem;
+      filter: invert(100%);
 
       @include respond(tab-port) {
         transform: scale(0.75);
@@ -86,8 +89,9 @@
       &:link,
       &:visited {
         text-decoration: none;
-        color: #131312;
+        color: $white;
         font-family: "Ubuntu";
+        font-weight: 700;
         margin-left: 3rem;
         font-size: 2.4rem;
 

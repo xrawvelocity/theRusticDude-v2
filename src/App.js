@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
-import Reviews from "./components/Reviews";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import FAQ from "./components/Faq";
@@ -179,11 +178,6 @@ export default class App extends Component {
               exact
               path="/projects"
               render={(props) => <Projects {...props} />}
-            />
-            <Route
-              exact
-              path="/reviews"
-              render={(props) => <Reviews {...props} />}
             />
             <Route
               exact

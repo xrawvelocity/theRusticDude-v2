@@ -54,7 +54,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background-color: #f7f7e7;
+  background-color: #111;
   overflow-x: hidden; }
   @media only screen and (max-width: 100em) {
     html {
@@ -118,7 +118,6 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   width: 100%;
   z-index: 10000000;
-  background-color: rgba(243, 243, 220, 0.9);
   animation: moveInTop 1s ease 0.5s;
   animation-fill-mode: backwards;
   overflow: hidden; }
@@ -149,7 +148,10 @@ body::-webkit-scrollbar-thumb {
         width: 225px;
         padding-left: 2rem; } }
     .navigation-logo_image {
-      transform: scale(0.5); }
+      transform: scale(0.5);
+      background-color: #f7f7e7;
+      border-radius: 50%;
+      margin-right: 3rem; }
       @media only screen and (max-width: 560px) {
         .navigation-logo_image {
           transform: scale(0.4); } }
@@ -159,7 +161,8 @@ body::-webkit-scrollbar-thumb {
     .navigation-logo_text {
       height: 200px;
       transform: scale(1);
-      margin-left: -5rem; }
+      margin-left: -5rem;
+      filter: invert(100%); }
       @media only screen and (max-width: 65em) {
         .navigation-logo_text {
           transform: scale(0.75);
@@ -179,8 +182,9 @@ body::-webkit-scrollbar-thumb {
         display: none; } }
     .navigation-links > *, .navigation-links > *:link, .navigation-links > *:visited {
       text-decoration: none;
-      color: #131312;
+      color: #f7f7e7;
       font-family: "Ubuntu";
+      font-weight: 700;
       margin-left: 3rem;
       font-size: 2.4rem; }
       .navigation-links > *::after, .navigation-links > *:link::after, .navigation-links > *:visited::after {
@@ -334,10 +338,37 @@ body::-webkit-scrollbar-thumb {
         margin-top: 1.5rem; } }
 
 .home {
-  padding: 0 10%;
   display: flex;
   flex-direction: column;
-  margin-top: 22rem; }
+  background-color: #111; }
+  .home-hero {
+    position: relative; }
+    .home-hero-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .home-hero-title {
+      text-align: start;
+      font-size: 10rem;
+      color: #f7f7e7; }
+    .home-hero-button {
+      margin-top: 5rem;
+      width: 35%;
+      font-size: 5rem;
+      padding: .5rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      background-color: #f7f7e7; }
+    .home-hero-video {
+      width: 100vw;
+      align-items: center;
+      opacity: 0.2;
+      background-color: #151515; }
   .home-main {
     display: flex;
     justify-content: space-around;
@@ -374,7 +405,7 @@ body::-webkit-scrollbar-thumb {
         margin-top: 30rem; } }
     .home-cta_text {
       width: 90%;
-      color: #131312;
+      color: #f7f7e7;
       animation: moveInBottom 1s ease 0.5s;
       animation-fill-mode: backwards; }
       @media only screen and (max-width: 560px) {
@@ -658,7 +689,7 @@ body::-webkit-scrollbar-thumb {
   .home-contact-title {
     font-size: 3rem;
     margin-top: 3rem;
-    color: #131312;
+    color: #f7f7e7;
     text-align: center; }
     @media only screen and (max-width: 560px) {
       .home-contact-title {
@@ -667,7 +698,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #131312;
+    color: #f7f7e7;
     margin: 2rem 0 0;
     width: 50%;
     text-align: center; }
@@ -719,7 +750,7 @@ body::-webkit-scrollbar-thumb {
         display: block;
         height: 4px;
         width: 100%;
-        background-color: #131312;
+        background-color: #f7f7e7;
         transform: scaleX(0);
         transform-origin: 0%;
         transition: transform 0.3s ease;
@@ -735,7 +766,7 @@ body::-webkit-scrollbar-thumb {
       .home-contact-form-group__label {
         margin: 3rem 0 1rem;
         align-self: start;
-        color: #131312;
+        color: #f7f7e7;
         position: absolute;
         bottom: 0rem;
         font-size: 2rem;
@@ -747,7 +778,7 @@ body::-webkit-scrollbar-thumb {
             bottom: 1rem; } }
       .home-contact-form-group__input {
         background-color: transparent;
-        color: #131312;
+        color: #f7f7e7;
         border: none;
         border-bottom: 2px dashed #666;
         padding: 0.5rem 0rem;
@@ -831,7 +862,7 @@ body::-webkit-scrollbar-thumb {
   height: auto;
   align-items: center;
   font-size: 2rem;
-  background-color: rgba(243, 243, 220, 0.9);
+  color: #f7f7e7;
   padding: 3rem 0; }
   .footer-contact {
     width: auto; }
