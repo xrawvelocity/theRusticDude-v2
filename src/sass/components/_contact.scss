@@ -1,0 +1,186 @@
+.home-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease 0.75s;
+  animation-fill-mode: backwards;
+  min-height: 63vh;
+
+  @include respond(phone) {
+    min-height: 72vh;
+  }
+
+  &-title {
+    font-size: 3rem;
+    margin-top: 3rem;
+    color: $black;
+    text-align: center;
+
+    @include respond(phone){
+      width: 90%;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $black;
+    margin: 2rem 0 0;
+    width: 50%;
+    text-align: center;
+
+    @include respond(phone) {
+      margin: 4rem 0 0;
+      width: 80%;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__paragraph {
+      font-size: 3rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &-links {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: -10rem;
+
+    @include respond(phone) {
+      width: 55rem;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10rem auto 5rem;
+    font-size: 2.6rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+      margin: 15rem 0 0;
+      padding-bottom: 15rem;
+    }
+
+    &-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 5rem;
+
+      &-image {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 5rem;
+      }
+
+      &::after {
+        content: "";
+        position: relative;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: $black;
+        transform: scaleX(0);
+        transform-origin: 0%;
+        transition: transform 0.3s ease;
+        top: 0;
+      }
+
+      &:focus-within {
+        border-color: transparent;
+
+        &::after {
+          transform: scaleX(1);
+        }
+
+        & .home-contact-form-group__label {
+          transform: translateY(-3.5rem);
+        }
+      }
+
+      &__input:not(:placeholder-shown) + &__label {
+        transform: translateY(-3.5rem);
+      }
+
+      &__label {
+        // z-index: -1;
+        margin: 3rem 0 1rem;
+        align-self: start;
+        color: $black;
+        position: absolute;
+        bottom: 0rem;
+        font-size: 2rem;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          cursor: text;
+        }
+
+        @include respond(phone) {
+          bottom: 1rem;
+        }
+      }
+
+      &__input {
+        background-color: transparent;
+        color: $black;
+        border: none;
+        border-bottom: 2px dashed #666;
+        padding: 0.5rem 0rem;
+        font-size: 3rem;
+
+        &:hover {
+          cursor: text;
+        }
+
+        &-file {
+          visibility: hidden;
+          display: none;
+          &-label {
+            margin: 1rem 0;
+            background-color: #ccc;
+            padding: 1rem 1.5rem;
+            &:hover {
+              background-color: #ddd;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    &-button {
+      background-color: $accent;
+      color: $white;
+      font-size: 3rem;
+      border-radius: 3px;
+      border: none;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      margin-top: 3rem;
+      align-self: center;
+      transition: all 0.1s ease-out;
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
