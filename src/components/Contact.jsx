@@ -7,7 +7,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <section style={{ margin: "20rem 0 0" }} className="home-contact">
+      <section style={{marginTop:"20rem"}} className="home-contact">
         <h4 className="home-contact-title">
           For any inquiries do not hesitate to react out!
         </h4>
