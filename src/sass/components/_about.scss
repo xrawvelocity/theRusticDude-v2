@@ -12,13 +12,18 @@
   }
 
   &-video {
-      width: 70%;
+      width: 55vw;
       height: 60rem;
-      margin-bottom: 10rem;
+      margin: 0 auto;
+
+      @include respond (tab-port) {
+        width: 90vw;
+        height: 40vh;
+      }
 
       @include respond (phone) {
         width: 90vw;
-        height: 30vh;
+        height: 25vh;
       }
   }
 }

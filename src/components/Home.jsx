@@ -18,35 +18,43 @@ export default class Home extends Component {
             <h1 className="home-hero-title">
               Custom <span>Rustic</span> Furniture
             </h1>
+            <p className="home-hero-text">Based in Miami, FL</p>
             <Link to="/contact" class="home-hero-button">
               Contact Us
             </Link>
           </div>
         </div>
 
+        <div id="about" className="home-divisor"></div>
+        <h1 className="home-title">About Us</h1>
+
+        <iframe
+          className="about-video"
+          title="The Rustic Dude"
+          src="https://www.youtube.com/embed/fRxSNFj7j38"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        ></iframe>
         <div className="home-divisor"></div>
         <h1 className="home-title">Meet The Team</h1>
         <section className="home-main">
           <img src="../images/tito1.PNG" alt="manuel" className="home-image2" />
           <div className="home-cta">
             <div className="home-cta_text">
-              Hello! My name is Manuel and there's nothing that I'm more
+              Hello! My name is <strong>Manuel</strong> and there's nothing that I'm more
               passionate about than working with my hands
             </div>
             <Link to="/projects" className="home-cta_button">
-              Previous Projects
+              View Projects
             </Link>
           </div>
         </section>
         <div className="home-divisor"></div>
         <section className="home-main">
           <div className="home-cta">
-            <div className="home-cta_text">
-              Hi! My name is Claudia and if you want to find out more about us
-              click the button below
-            </div>
-            <Link to="/about" className="home-cta_button">
-              Learn More
+            <div className="home-cta_text">Hi! My name is <strong>Claudia</strong> I love assisting our clients with any questions they might have</div>
+            <Link to="/FAQ" className="home-cta_button">
+              Frequently Asked Questions
             </Link>
           </div>
           <img
@@ -60,8 +68,8 @@ export default class Home extends Component {
           <div className="home-banner-image_1 home-banner-image-container">
             <div className="home-banner-review">
               <img
-                src="https://www.famefocus.com/wp-content/uploads/2017/11/harrison-ford-1000x600.jpg"
-                alt="harrison"
+                src="https://static.businessnews.com.au/sites/default/files/styles/wabn_kb_company_logo/public/brendan%20white.jpg?itok=CDrEecZZ"
+                alt="person1"
                 className="home-banner-review-img"
               />
 
@@ -69,7 +77,7 @@ export default class Home extends Component {
                 "This table is perfect for our backyard, we couldn't find the
                 perfect one until we reached out to TheRusticDude"
               </p>
-              <h3 className="home-banner-review-name">-Harrison Ford</h3>
+              <h3 className="home-banner-review-name">- Jonathan A.</h3>
               <p className="home-banner-review-rating">4.5/5</p>
             </div>
             <img
@@ -81,8 +89,8 @@ export default class Home extends Component {
           <div className="home-banner-image_2 home-banner-image-container">
             <div className="home-banner-review">
               <img
-                src="https://qph.fs.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp"
-                alt="morgan"
+                src="https://ak.picdn.net/shutterstock/videos/4783967/thumb/1.jpg"
+                alt="person2"
                 className="home-banner-review-img"
               />
 
@@ -90,7 +98,7 @@ export default class Home extends Component {
                 "The contrast that this table has with our white interior is
                 mind blowing, this custom table has really livened up my house"
               </p>
-              <h3 className="home-banner-review-name">-Morgan Freeman</h3>
+              <h3 className="home-banner-review-name">- Jade H.</h3>
               <p className="home-banner-review-rating">5/5</p>
             </div>
             <img
@@ -108,9 +116,10 @@ export default class Home extends Component {
               />
 
               <p className="home-banner-review-content">
-                "Every time I have people over they compliment my new rustic table, this is really well done!"
+                "Every time I have people over they compliment my new rustic
+                table, this is really well done!"
               </p>
-              <h3 className="home-banner-review-name">-Jennifer Smith</h3>
+              <h3 className="home-banner-review-name">- Jennifer S.</h3>
               <p className="home-banner-review-rating">5/5</p>
             </div>
             <img

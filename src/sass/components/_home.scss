@@ -18,7 +18,7 @@
     height: 400px;
     overflow: hidden;
 
-    @include respond(phone){
+    @include respond(tab-port) {
       flex-direction: column;
       justify-content: space-evenly;
       height: 100%;
@@ -48,10 +48,10 @@
       }
 
       &-img {
-        height: 100px;
+        height: 110px;
         width: 133px;
         object-fit: cover;
-        object-position: left;
+        object-position: center;
         clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
         margin-bottom: 3rem;
         margin-left: 2rem;
@@ -71,13 +71,13 @@
       height: 400px;
       object-fit: cover;
       filter: brightness(30%);
-      transition: all .75s cubic-bezier(0.25, 1, 0.5, 1);
+      transition: all 0.75s cubic-bezier(0.25, 1, 0.5, 1);
 
       &-container {
         position: relative;
       }
 
-      @include respond(phone) {
+      @include respond(tab-port) {
       }
 
       &_1 {
@@ -140,6 +140,17 @@
       transition: all 0.4s ease;
     }
 
+    &-text {
+      font-size: 3.6rem;
+      margin-top: 3rem;
+      color: $white;
+
+      animation: moveInTop 1s ease 1.25s;
+      animation-fill-mode: backwards;
+
+      transition: all 0.4s ease;
+    }
+
     &-button {
       margin-top: 5rem;
       font-size: 4rem;
@@ -181,7 +192,7 @@
 
       background-image: linear-gradient(to top, #000 0%, #fff 10%);
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         height: 100vh;
         width: auto;
         object-position: -450px 0px;
@@ -195,8 +206,9 @@
     height: 70vh;
     padding: 0 10%;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-weight: 800;
+      align-items: center;
     }
 
     &-last {
@@ -228,15 +240,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     padding-left: 1rem;
     width: 35%;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       position: absolute;
       z-index: 1000;
       width: 60%;
-      margin-top: 30rem;
+      height: auto;
     }
 
     &_text {
@@ -247,7 +259,7 @@
       animation: moveInBottom 1s ease 0.5s;
       animation-fill-mode: backwards;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         color: $white;
       }
     }
@@ -298,7 +310,7 @@
     animation: moveInRight 1s ease 0.75s;
     animation-fill-mode: backwards;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
       width: 100%;
       filter: brightness(0.5);
@@ -317,7 +329,7 @@
     animation: moveInLeft 1s ease 0.75s;
     animation-fill-mode: backwards;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
       width: 100%;
       filter: brightness(0.5);
@@ -349,7 +361,7 @@
   -moz-animation: fade_move_down 4s ease-in-out infinite;
   animation: fade_move_down 4s ease-in-out infinite;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     bottom: 25px;
   }
 }

@@ -145,39 +145,32 @@ body::-webkit-scrollbar-thumb {
     @media only screen and (max-width: 65em) {
       .navigation-logo, .footer-logo {
         height: 100px;
-        width: 300px; } }
+        width: 20rem; } }
     @media only screen and (max-width: 560px) {
       .navigation-logo, .footer-logo {
         height: 100px;
-        width: 250px; } }
-    @media only screen and (max-width: 400px) {
-      .navigation-logo, .footer-logo {
-        height: 100px;
-        width: 225px;
-        padding-left: 2rem; } }
+        width: 20rem; } }
     .navigation-logo_image {
       transform: scale(0.5);
       background-color: #f7f7e7;
       border-radius: 50%; }
       @media only screen and (max-width: 560px) {
         .navigation-logo_image {
-          transform: scale(0.4);
-          margin-right: 0rem; } }
-      @media only screen and (max-width: 400px) {
-        .navigation-logo_image {
-          transform: scale(0.4); } }
+          transform: scale(0.3); } }
     .navigation-logo_text {
       height: 200px;
       transform: scale(1);
-      filter: invert(100%); }
+      filter: invert(100%);
+      margin-left: -3rem; }
       @media only screen and (max-width: 65em) {
         .navigation-logo_text {
           transform: scale(0.85);
-          margin-left: -10rem; } }
+          margin-left: -10rem;
+          display: none; } }
       @media only screen and (max-width: 560px) {
         .navigation-logo_text {
-          transform: scale(0.8);
-          margin-left: -10rem; } }
+          transform: scale(0.7);
+          margin-left: -8rem; } }
       @media only screen and (max-width: 400px) {
         .navigation-logo_text {
           transform: scale(0.6);
@@ -228,8 +221,8 @@ body::-webkit-scrollbar-thumb {
         background-color: #222;
         padding: 1rem 2rem;
         position: fixed;
-        top: 80px;
-        right: 10px;
+        top: 15rem;
+        right: 5%;
         overflow: hidden;
         animation: fadeIn 0.5s ease;
         animation-fill-mode: both; } }
@@ -237,7 +230,7 @@ body::-webkit-scrollbar-thumb {
       text-decoration: none;
       color: #f7f7e7;
       font-family: "Ubuntu";
-      font-size: 2.4rem; }
+      font-size: 4rem; }
       .navigation-hamburger_active > *:not(:last-child), .navigation-hamburger_active > *:link:not(:last-child), .navigation-hamburger_active > *:visited:not(:last-child) {
         margin-bottom: 2rem; }
       .navigation-hamburger_active > *::after, .navigation-hamburger_active > *:link::after, .navigation-hamburger_active > *:visited::after {
@@ -262,8 +255,8 @@ body::-webkit-scrollbar-thumb {
         background-color: #222;
         padding: 1rem 2rem;
         position: fixed;
-        top: 80px;
-        right: 10px;
+        top: 15rem;
+        right: 5%;
         overflow: hidden;
         animation: fadeOut 0.5s ease;
         animation-fill-mode: both; }
@@ -271,7 +264,7 @@ body::-webkit-scrollbar-thumb {
           text-decoration: none;
           color: #f7f7e7;
           font-family: "Ubuntu";
-          font-size: 2.4rem; }
+          font-size: 4rem; }
           .navigation-hamburger_close > *:not(:last-child), .navigation-hamburger_close > *:link:not(:last-child), .navigation-hamburger_close > *:visited:not(:last-child) {
             margin-bottom: 2rem; }
           .navigation-hamburger_close > *::after, .navigation-hamburger_close > *:link::after, .navigation-hamburger_close > *:visited::after {
@@ -298,9 +291,9 @@ body::-webkit-scrollbar-thumb {
       flex-direction: column;
       position: fixed;
       top: 30px;
-      right: 30px;
-      width: 30px;
-      height: 50px;
+      right: 10%;
+      width: 5rem;
+      height: 5rem;
       transition: all 0.3s ease; }
       .hamburger::before, .hamburger::after {
         clear: both;
@@ -334,9 +327,9 @@ body::-webkit-scrollbar-thumb {
       flex-direction: column;
       position: fixed;
       top: 30px;
-      right: 30px;
-      width: 30px;
-      height: 50px;
+      right: 10%;
+      width: 5rem;
+      height: 5rem;
       transition: all 0.3s ease; }
       .hamburger_open:hover {
         cursor: pointer; }
@@ -360,7 +353,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 400px;
     overflow: hidden; }
-    @media only screen and (max-width: 560px) {
+    @media only screen and (max-width: 65em) {
       .home-banner {
         flex-direction: column;
         justify-content: space-evenly;
@@ -384,10 +377,10 @@ body::-webkit-scrollbar-thumb {
       .home-banner-review:hover ~ * {
         transform: scale(1.1); }
       .home-banner-review-img {
-        height: 100px;
+        height: 110px;
         width: 133px;
         object-fit: cover;
-        object-position: left;
+        object-position: center;
         clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
         margin-bottom: 3rem;
         margin-left: 2rem; }
@@ -440,6 +433,13 @@ body::-webkit-scrollbar-thumb {
       animation: moveInTop 1.5s ease 1.25s;
       animation-fill-mode: backwards;
       transition: all 0.4s ease; }
+    .home-hero-text {
+      font-size: 3.6rem;
+      margin-top: 3rem;
+      color: #f7f7e7;
+      animation: moveInTop 1s ease 1.25s;
+      animation-fill-mode: backwards;
+      transition: all 0.4s ease; }
     .home-hero-button {
       margin-top: 5rem;
       font-size: 4rem;
@@ -466,7 +466,7 @@ body::-webkit-scrollbar-thumb {
       align-items: center;
       opacity: 0.2;
       background-image: linear-gradient(to top, #000 0%, #fff 10%); }
-      @media only screen and (max-width: 560px) {
+      @media only screen and (max-width: 65em) {
         .home-hero-video {
           height: 100vh;
           width: auto;
@@ -476,9 +476,10 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-around;
     height: 70vh;
     padding: 0 10%; }
-    @media only screen and (max-width: 560px) {
+    @media only screen and (max-width: 65em) {
       .home-main {
-        font-weight: 800; } }
+        font-weight: 800;
+        align-items: center; } }
     .home-main-last {
       margin-bottom: 10rem; }
   .home-divisor {
@@ -497,22 +498,21 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 3rem;
     padding-left: 1rem;
     width: 35%; }
-    @media only screen and (max-width: 560px) {
+    @media only screen and (max-width: 65em) {
       .home-cta {
         position: absolute;
         z-index: 1000;
         width: 60%;
-        margin-top: 30rem; } }
+        height: auto; } }
     .home-cta_text {
       width: 90%;
       color: #f7f7e7;
       line-height: 1.4;
       animation: moveInBottom 1s ease 0.5s;
       animation-fill-mode: backwards; }
-      @media only screen and (max-width: 560px) {
+      @media only screen and (max-width: 65em) {
         .home-cta_text {
           color: #f7f7e7; } }
     .home-cta_button {
@@ -544,7 +544,7 @@ body::-webkit-scrollbar-thumb {
     object-fit: cover;
     animation: moveInRight 1s ease 0.75s;
     animation-fill-mode: backwards; }
-    @media only screen and (max-width: 560px) {
+    @media only screen and (max-width: 65em) {
       .home-image1 {
         clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
         width: 100%;
@@ -558,7 +558,7 @@ body::-webkit-scrollbar-thumb {
     object-fit: cover;
     animation: moveInLeft 1s ease 0.75s;
     animation-fill-mode: backwards; }
-    @media only screen and (max-width: 560px) {
+    @media only screen and (max-width: 65em) {
       .home-image2 {
         clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
         width: 100%;
@@ -587,7 +587,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
   -moz-animation: fade_move_down 4s ease-in-out infinite;
   animation: fade_move_down 4s ease-in-out infinite; }
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: 65em) {
     .scroll-down {
       bottom: 25px; } }
 
@@ -651,7 +651,7 @@ body::-webkit-scrollbar-thumb {
     @media only screen and (max-width: 65em) {
       .projects-card {
         min-height: 350px;
-        width: 95%; } }
+        width: 100%; } }
     .projects-card-add {
       color: #20a80e;
       font-size: 6rem;
@@ -984,13 +984,17 @@ body::-webkit-scrollbar-thumb {
     .about {
       min-height: 70vh; } }
   .about-video {
-    width: 70%;
+    width: 55vw;
     height: 60rem;
-    margin-bottom: 10rem; }
+    margin: 0 auto; }
+    @media only screen and (max-width: 65em) {
+      .about-video {
+        width: 90vw;
+        height: 40vh; } }
     @media only screen and (max-width: 560px) {
       .about-video {
         width: 90vw;
-        height: 30vh; } }
+        height: 25vh; } }
 
 .admin {
   width: 100vw;
@@ -1032,7 +1036,7 @@ body::-webkit-scrollbar-thumb {
     .footer-contact > *:not(:first-child) {
       margin-top: 1.5rem; }
   .footer a {
-    color: #349; }
+    color: rgba(10, 161, 231, 0.972); }
     .footer a:hover {
       cursor: pointer; }
   @media only screen and (max-width: 65em) {

@@ -30,16 +30,11 @@
 
     @include respond(tab-port) {
       height: 100px;
-      width: 300px;
+      width: 20rem;
     }
     @include respond(phone) {
       height: 100px;
-      width: 250px;
-    }
-    @include respond(smallphone) {
-      height: 100px;
-      width: 225px;
-      padding-left: 2rem;
+      width: 20rem;
     }
 
     &_image {
@@ -47,11 +42,8 @@
       background-color: $white;
       border-radius: 50%;
       @include respond(phone) {
-        transform: scale(0.4);
-        margin-right: 0rem;
-      }
-      @include respond(smallphone) {
-        transform: scale(.4);
+        transform: scale(0.3);
+        
       }
     }
 
@@ -59,14 +51,15 @@
       height: 200px;
       transform: scale(1);
       filter: invert(100%);
-
+      margin-left: -3rem;
       @include respond(tab-port) {
         transform: scale(0.85);
         margin-left: -10rem;
+        display: none;
       }
       @include respond(phone) {
-        transform: scale(0.8);
-        margin-left: -10rem;
+        transform: scale(.7);
+        margin-left: -8rem;
       }
       @include respond(smallphone) {
         transform: scale(0.6);
@@ -124,8 +117,8 @@
         background-color: #222;
         padding: 1rem 2rem;
         position: fixed;
-        top: 80px;
-        right: 10px;
+        top: 15rem;
+        right: 5%;
         overflow: hidden;
         animation: fadeIn 0.5s ease;
         animation-fill-mode: both;
@@ -138,7 +131,7 @@
           text-decoration: none;
           color: $white;
           font-family: "Ubuntu";
-          font-size: 2.4rem;
+          font-size: 4rem;
 
           &:not(:last-child) {
             margin-bottom: 2rem;
@@ -156,8 +149,8 @@
         background-color: #222;
         padding: 1rem 2rem;
         position: fixed;
-        top: 80px;
-        right: 10px;
+        top: 15rem;
+        right: 5%;
         overflow: hidden;
         animation: fadeOut 0.5s ease;
         animation-fill-mode: both;
@@ -169,7 +162,7 @@
             text-decoration: none;
             color: $white;
             font-family: "Ubuntu";
-            font-size: 2.4rem;
+            font-size: 4rem;
 
             &:not(:last-child) {
               margin-bottom: 2rem;
@@ -191,9 +184,9 @@
     flex-direction: column;
     position: fixed;
     top: 30px;
-    right: 30px;
-    width: 30px;
-    height: 50px;
+    right: 10%;
+    width: 5rem;
+    height: 5rem;
     transition: all 0.3s ease;
 
     &::before,
@@ -248,9 +241,9 @@
       flex-direction: column;
       position: fixed;
       top: 30px;
-      right: 30px;
-      width: 30px;
-      height: 50px;
+      right: 10%;
+      width: 5rem;
+      height: 5rem;
       transition: all 0.3s ease;
 
       &:hover {

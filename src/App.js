@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
-import About from "./components/About";
 import Contact from "./components/Contact";
 import FAQ from "./components/Faq";
 import Admin from "./components/Admin";
@@ -56,20 +55,7 @@ export default class App extends Component {
             >
               Projects
             </Link>
-            <Link
-              onClick={() => {
-                this.setState({ selected: "about" });
-              }}
-              to="/about"
-              className={`navigation-links_about ${
-                this.state.selected === "about" ||
-                window.location.href.includes("about")
-                  ? "navigation-links_active"
-                  : null
-              }`}
-            >
-              About
-            </Link>
+            
             <Link
               onClick={() => {
                 this.setState({ selected: "contact" });
@@ -146,15 +132,6 @@ export default class App extends Component {
               onClick={() => {
                 this.setState({ active: false, close: true });
               }}
-              to="/about"
-              className="navigation-hamburger_about"
-            >
-              About
-            </Link>
-            <Link
-              onClick={() => {
-                this.setState({ active: false, close: true });
-              }}
               to="/contact"
               className="navigation-hamburger_contact"
             >
@@ -181,11 +158,6 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/about"
-              render={(props) => <About {...props} />}
-            />
-            <Route
-              exact
               path="/contact"
               render={(props) => <Contact {...props} />}
             />
@@ -204,13 +176,13 @@ export default class App extends Component {
             <a href="https://www.instagram.com/therusticdude/" className="footer-links_instagram" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon  icon={faInstagram} /></a>
             <a href="https://offerup.co/SVwgvyaK86" className="footer-links_offerup" target="_blank" rel="noopener noreferrer"> <img className="footer-links_offerup-image" src="../images/offerup.jpg" alt="offerup" /></a>
           </div>
-          <div className="footer-logo">
+          <Link to="/" className="footer-logo">
             <img
               className="navigation-logo_image"
               src="./images/theRusticDudeLogoImage.png"
               alt="logo"
             />
-          </div>
+          </Link>
           <div className="footer-contact">
             <p>Phone: (305) 399-9126</p>
             <p>
