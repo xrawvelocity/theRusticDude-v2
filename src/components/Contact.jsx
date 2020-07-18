@@ -56,7 +56,7 @@ export default class Contact extends Component {
             </label>
           </div>
           <button class="home-contact-form-button" type="submit">
-            Submit
+            Send Email
           </button>
         </form>
       </section>

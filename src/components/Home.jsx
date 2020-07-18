@@ -20,7 +20,7 @@ export default class Home extends Component {
             </h1>
             <p className="home-hero-text">Based in Miami, FL</p>
             <Link to="/contact" class="home-hero-button">
-              Contact Us
+              Get In Touch
             </Link>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default class Home extends Component {
               </label>
             </div>
             <button class="home-contact-form-button" type="submit">
-              Submit
+              Send Email
             </button>
           </form>
         </section>
