@@ -343,8 +343,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #111; }
   .home-title {
     color: #fff;
-    font-size: 7rem;
-    padding: 5rem 0 10rem;
+    font-size: 5rem;
+    padding: 10rem 0;
     width: 100%;
     text-align: center; }
   .home-banner {
@@ -463,6 +463,8 @@ body::-webkit-scrollbar-thumb {
         display: none; }
     .home-hero-video {
       width: 100vw;
+      height: 100vh;
+      object-fit: cover;
       align-items: center;
       opacity: 0.2;
       background-image: linear-gradient(to top, #000 0%, #fff 10%); }
@@ -475,7 +477,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-around;
     height: 70vh;
-    padding: 0 10%; }
+    padding: 0rem 10%; }
     @media only screen and (max-width: 65em) {
       .home-main {
         font-weight: 800;
@@ -739,17 +741,15 @@ body::-webkit-scrollbar-thumb {
         color: #a00; }
 
 .faq {
-  min-height: 83vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Ubuntu";
-  padding: 5rem 0;
+  padding: 2rem 0 5rem;
+  background-color: #444;
   animation: fadeIn 1s ease 0.5s;
   animation-fill-mode: backwards; }
-  @media only screen and (max-width: 560px) {
-    .faq {
-      min-height: 87vh; } }
 
 .accordion-list {
   list-style: none;
@@ -844,7 +844,8 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   animation: fadeIn 1s ease 0.75s;
   animation-fill-mode: backwards;
-  min-height: 63vh; }
+  min-height: 63vh;
+  padding: 10rem 0; }
   @media only screen and (max-width: 560px) {
     .home-contact {
       min-height: 72vh; } }
@@ -965,7 +966,6 @@ body::-webkit-scrollbar-thumb {
       border-radius: 3px;
       border: none;
       padding: 1rem 1.5rem;
-      text-transform: uppercase;
       margin-top: 3rem;
       align-self: center;
       transition: all 0.1s ease-out; }
@@ -1030,7 +1030,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   font-size: 2rem;
   color: #f7f7e7;
-  padding: 3rem 0; }
+  padding: 0rem 0 10rem 0; }
   .footer-contact {
     width: auto; }
     .footer-contact > *:not(:first-child) {

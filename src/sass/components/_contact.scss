@@ -6,6 +6,7 @@
   animation: fadeIn 1s ease 0.75s;
   animation-fill-mode: backwards;
   min-height: 63vh;
+  padding: 10rem 0;
 
   @include respond(phone) {
     min-height: 72vh;
@@ -172,7 +173,6 @@
       border-radius: 3px;
       border: none;
       padding: 1rem 1.5rem;
-      text-transform: uppercase;
       margin-top: 3rem;
       align-self: center;
       transition: all 0.1s ease-out;

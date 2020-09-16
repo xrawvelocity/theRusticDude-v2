@@ -6,10 +6,7 @@ import Contact from "./components/Contact";
 import FAQ from "./components/Faq";
 import Admin from "./components/Admin";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default class App extends Component {
   state = {
@@ -24,6 +21,7 @@ export default class App extends Component {
         <nav className="navigation">
           <Link
             onClick={() => {
+              window.scrollTo(0, 0);
               this.setState({ active: false, close: true, selected: "" });
             }}
             to="/"
@@ -55,35 +53,13 @@ export default class App extends Component {
             >
               Projects
             </Link>
-            
-            <Link
-              onClick={() => {
-                this.setState({ selected: "contact" });
-              }}
-              to="/contact"
-              className={`navigation-links_contact ${
-                this.state.selected === "contact" ||
-                window.location.href.includes("contact")
-                  ? "navigation-links_active"
-                  : null
-              }`}
-            >
-              Contact
-            </Link>
-            <Link
-              onClick={() => {
-                this.setState({ selected: "FAQ" });
-              }}
-              to="/FAQ"
-              className={`navigation-links_FAQ ${
-                this.state.selected === "FAQ" ||
-                window.location.href.includes("FAQ")
-                  ? "navigation-links_active"
-                  : null
-              }`}
-            >
+
+            <a href="#faq" className="navigation-links_FAQ">
               FAQ
-            </Link>
+            </a>
+            <a href="#contact" className="navigation-links_contact">
+              Contact
+            </a>
           </div>
           <div
             onClick={async () => {
@@ -128,24 +104,12 @@ export default class App extends Component {
             >
               Projects
             </Link>
-            <Link
-              onClick={() => {
-                this.setState({ active: false, close: true });
-              }}
-              to="/contact"
-              className="navigation-hamburger_contact"
-            >
+            <a href="#contact" className="navigation-hamburger_contact">
               Contact
-            </Link>
-            <Link
-              onClick={() => {
-                this.setState({ active: false, close: true });
-              }}
-              to="/FAQ"
-              className="navigation-hamburger_FAQ"
-            >
+            </a>
+            <a href="#faq" className="navigation-hamburger_FAQ">
               FAQ
-            </Link>
+            </a>
           </div>
         </nav>
         <Fragment>
@@ -172,9 +136,36 @@ export default class App extends Component {
         </Fragment>
         <footer className="footer">
           <div className="footer-links">
-            <a href="https://www.facebook.com/theRusticDude/" className="footer-links_facebook" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a>
-            <a href="https://www.instagram.com/therusticdude/" className="footer-links_instagram" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon  icon={faInstagram} /></a>
-            <a href="https://offerup.co/SVwgvyaK86" className="footer-links_offerup" target="_blank" rel="noopener noreferrer"> <img className="footer-links_offerup-image" src="../images/offerup.jpg" alt="offerup" /></a>
+            <a
+              href="https://www.facebook.com/theRusticDude/"
+              className="footer-links_facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a
+              href="https://www.instagram.com/therusticdude/"
+              className="footer-links_instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a
+              href="https://offerup.co/SVwgvyaK86"
+              className="footer-links_offerup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img
+                className="footer-links_offerup-image"
+                src="../images/offerup.jpg"
+                alt="offerup"
+              />
+            </a>
           </div>
           <Link to="/" className="footer-logo">
             <img

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import FAQ from "./Faq";
+import Projects from "./Projects";
 
 export default class Home extends Component {
   componentDidMount() {
@@ -18,15 +20,15 @@ export default class Home extends Component {
             <h1 className="home-hero-title">
               Custom <span>Rustic</span> Furniture
             </h1>
-            <p className="home-hero-text">Based in Miami, FL</p>
             <Link to="/contact" class="home-hero-button">
               Get In Touch
             </Link>
           </div>
         </div>
 
-        <div id="about" className="home-divisor"></div>
-        <h1 className="home-title">About Us</h1>
+        {/* <h1 className="home-title">Our Work</h1>
+        <Projects /> */}
+       {/* <h1 className="home-title">About Us</h1>
 
         <iframe
           className="about-video"
@@ -35,7 +37,7 @@ export default class Home extends Component {
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         ></iframe>
-        <div className="home-divisor"></div>
+        <div className="home-divisor"></div> */}
         <h1 className="home-title">Meet The Team</h1>
         <section className="home-main">
           <img src="../images/tito1.PNG" alt="manuel" className="home-image2" />
@@ -129,9 +131,12 @@ export default class Home extends Component {
             />
           </div>
         </div>
-        <div className="home-divisor"></div>
 
-        <section className="home-contact">
+        <h1 id="faq" className="home-title">Have Any Questions?</h1>
+
+        <FAQ />
+
+        <section id="contact" className="home-contact">
           <h4 className="home-contact-title">
             For any inquiries do not hesitate to react out!
           </h4>

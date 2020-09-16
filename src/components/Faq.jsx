@@ -7,29 +7,31 @@ export default class FAQ extends Component {
 
   render() {
     return (
-        <div className="faq">
-            <Accordion />
-        </div>
+      <div className="faq">
+        <Accordion />
+      </div>
     );
   }
 }
 
 const data = [
   {
-    title: "How do you decide how much to charge your customers?",
-    paragraph: "Based on how big and complex their custom furniture is.",
-  },
-  {
-    title: "What kind of wood do you work with?",
-    paragraph: "We use soft yellow pine which we then might stain to fit the customer's liking.",
+    title: "How much would a table cost?",
+    paragraph: "It depends on how big and complex your custom furniture is.",
   },
   {
     title: "How will I pay for my custom furniture?",
     paragraph: "We currently only accept cash, checks, or cash app.",
   },
   {
+    title: "What kind of wood do you work with?",
+    paragraph:
+      "We use soft yellow pine which we then might stain to fit the customer's liking.",
+  },
+  {
     title: "Is your furniture fit for the outdoors?",
-    paragraph: "Yes it is! We use a UV and water protecting coat on all our works.",
+    paragraph:
+      "Yes it is! We use a UV and water protecting coat on all our works.",
   },
   {
     title: "Where is your business based?",
@@ -37,10 +39,8 @@ const data = [
   },
   {
     title: "Will you deliver the furniture to my home?",
-    paragraph: "Of couse! We want your experience to be flawless.",
+    paragraph: "Of couse! We want your experience to be as flawless as possible.",
   },
-  
-  
 ];
 
 class Accordion extends React.Component {
