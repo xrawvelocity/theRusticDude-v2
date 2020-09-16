@@ -167,7 +167,13 @@ export default class App extends Component {
               />
             </a>
           </div>
-          <Link to="/" className="footer-logo">
+          <Link
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+            to="/"
+            className="footer-logo"
+          >
             <img
               className="navigation-logo_image"
               src="./images/theRusticDudeLogoImage.png"
