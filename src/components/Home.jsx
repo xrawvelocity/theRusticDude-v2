@@ -19,9 +19,9 @@ export default class Home extends Component {
             <h1 className="home-hero-title">
               Custom <span>Rustic</span> Furniture
             </h1>
-            <Link to="/contact" class="home-hero-button">
+            <a href="#contact" class="home-hero-button">
               Get In Touch
-            </Link>
+            </a>
           </div>
         </div>
 
