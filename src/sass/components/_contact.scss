@@ -10,6 +10,7 @@
 
   @include respond(phone) {
     min-height: 72vh;
+    padding: 10rem 0 0rem 0;
   }
 
   &-title {

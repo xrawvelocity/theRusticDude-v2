@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import FAQ from "./Faq";
-import Projects from "./Projects";
 
 export default class Home extends Component {
   componentDidMount() {
@@ -55,9 +54,9 @@ export default class Home extends Component {
         <section className="home-main">
           <div className="home-cta">
             <div className="home-cta_text">Hi! My name is <strong>Claudia</strong> I love assisting our clients with any questions they might have</div>
-            <Link to="/FAQ" className="home-cta_button">
+            <a href="#faq" className="home-cta_button">
               Frequently Asked Questions
-            </Link>
+            </a>
           </div>
           <img
             src="../images/claudia4.png"
@@ -76,8 +75,7 @@ export default class Home extends Component {
               />
 
               <p className="home-banner-review-review">
-                "This table is perfect for our backyard, we couldn't find the
-                perfect one until we reached out to TheRusticDude"
+                "This table is perfect for our backyard, we couldn't find the right fit until we reached out to TheRusticDude"
               </p>
               <h3 className="home-banner-review-name">- Jonathan A.</h3>
               <p className="home-banner-review-rating">4.5/5</p>

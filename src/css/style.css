@@ -746,8 +746,8 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   font-family: "Ubuntu";
-  padding: 2rem 0 5rem;
-  background-color: #444;
+  padding: 5rem 0 5rem;
+  background-color: #222;
   animation: fadeIn 1s ease 0.5s;
   animation-fill-mode: backwards; }
 
@@ -755,7 +755,7 @@ body::-webkit-scrollbar-thumb {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #222;
   max-width: 30vw;
   border-radius: 0.4rem;
   overflow: hidden; }
@@ -784,7 +784,7 @@ body::-webkit-scrollbar-thumb {
 
 .accordion-item__line {
   display: block;
-  padding: 0.8rem 1.2rem;
+  padding: 2rem 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -793,7 +793,7 @@ body::-webkit-scrollbar-thumb {
   position: relative; }
   @media only screen and (max-width: 65em) {
     .accordion-item__line {
-      padding: 1.5rem 2rem; } }
+      padding: 2.5rem 2rem; } }
   .accordion-item__line:hover {
     cursor: pointer; }
 
@@ -828,7 +828,7 @@ body::-webkit-scrollbar-thumb {
   transition-duration: 0.1s;
   transition-property: opacity, transform;
   transition-delay: 0.5s;
-  padding: 1.2rem 1.2rem; }
+  padding: 2rem 1.2rem; }
 
 .accordion-item__paragraph {
   margin: 0;
@@ -848,7 +848,8 @@ body::-webkit-scrollbar-thumb {
   padding: 10rem 0; }
   @media only screen and (max-width: 560px) {
     .home-contact {
-      min-height: 72vh; } }
+      min-height: 72vh;
+      padding: 10rem 0 0rem 0; } }
   .home-contact-title {
     font-size: 3rem;
     margin-top: 3rem;
