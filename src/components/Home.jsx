@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import FAQ from "./Faq";
 import Projects from "./Projects";
 import {
-  faDollarSign,
   faTools,
   faTruck,
   faUserFriends,

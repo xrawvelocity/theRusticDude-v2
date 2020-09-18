@@ -1,10 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import FAQ from "./components/Faq";
-import Admin from "./components/Admin";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
