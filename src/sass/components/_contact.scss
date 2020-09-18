@@ -3,10 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #222;
   animation: fadeIn 1s ease 0.75s;
   animation-fill-mode: backwards;
   min-height: 63vh;
-  padding: 10rem 0;
+  padding: 10rem 0 5rem;
 
   @include respond(phone) {
     min-height: 72vh;

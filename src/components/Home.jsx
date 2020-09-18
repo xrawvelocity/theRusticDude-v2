@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import FAQ from "./Faq";
+import Projects from "./Projects";
+import {
+  faDollarSign,
+  faTools,
+  faTruck,
+  faUserFriends,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class Home extends Component {
   componentDidMount() {
@@ -27,7 +34,7 @@ export default class Home extends Component {
 
         {/* <h1 className="home-title">Our Work</h1>
         <Projects /> */}
-       {/* <h1 className="home-title">About Us</h1>
+        {/* <h1 className="home-title">About Us</h1>
 
         <iframe
           className="about-video"
@@ -37,26 +44,74 @@ export default class Home extends Component {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         ></iframe>
         <div className="home-divisor"></div> */}
+
+        <h1 id="#projects" className="home-title">
+          View Our Work
+        </h1>
+        <Projects />
+        <div className="home-random">
+          <h1 className="home-title">Why Choose Us</h1>
+          <div className="home-features">
+            <div className="home-features-card">
+              <FontAwesomeIcon
+                icon={faTruck}
+                className="home-features-card-icon"
+              />
+              <div className="home-features-card-title">Free Delivery</div>
+              <div className="home-features-card-text">
+                As long as you are not located more than 50 miles away, we will
+                deliver your custom rustic furniture to your house for free!
+              </div>
+            </div>
+
+            <div className="home-features-card">
+              <FontAwesomeIcon
+                icon={faTools}
+                className="home-features-card-icon"
+              />
+              <div className="home-features-card-title">Custom Made</div>
+              <div className="home-features-card-text">
+                Can't quite find the perfect furniture? Do not worry, we will
+                use our expertise to make sure you are 100% satisfied with our
+                work.
+              </div>
+            </div>
+
+            <div className="home-features-card">
+              <FontAwesomeIcon
+                icon={faUserFriends}
+                className="home-features-card-icon"
+              />
+              <div className="home-features-card-title">Family-Owned</div>
+              <div className="home-features-card-text">
+                We are a family-owned and operated business with a real dynamic
+                team and vision.
+              </div>
+            </div>
+          </div>
+        </div>
         <h1 className="home-title">Meet The Team</h1>
         <section className="home-main">
           <img src="../images/tito1.PNG" alt="manuel" className="home-image2" />
           <div className="home-cta">
             <div className="home-cta_text">
-              Hello! My name is <strong>Manuel</strong> and there's nothing that I'm more
-              passionate about than working with my hands
+              Hello! My name is <strong>Manuel</strong> and there's nothing that
+              I'm more passionate about than working with my hands
             </div>
-            <Link to="/projects" className="home-cta_button">
+            {/* <a href="#projects" className="home-cta_button">
               View Projects
-            </Link>
+            </a> */}
           </div>
         </section>
-        <div className="home-divisor"></div>
         <section className="home-main">
           <div className="home-cta">
-            <div className="home-cta_text">Hi! My name is <strong>Claudia</strong> I love assisting our clients with any questions they might have</div>
-            <a href="#faq" className="home-cta_button">
+            <div className="home-cta_text">
+              Hi! My name is <strong>Claudia</strong> I love assisting our
+              clients with any questions they might have
+            </div>
+            {/* <a href="#faq" className="home-cta_button">
               Frequently Asked Questions
-            </a>
+            </a> */}
           </div>
           <img
             src="../images/claudia4.png"
@@ -64,7 +119,6 @@ export default class Home extends Component {
             className="home-image1"
           />
         </section>
-        <div className="home-divisor"></div>
         <div className="home-banner">
           <div className="home-banner-image_1 home-banner-image-container">
             <div className="home-banner-review">
@@ -75,7 +129,8 @@ export default class Home extends Component {
               />
 
               <p className="home-banner-review-review">
-                "This table is perfect for our backyard, we couldn't find the right fit until we reached out to TheRusticDude"
+                "This table is perfect for our backyard, we couldn't find the
+                right fit until we reached out to TheRusticDude"
               </p>
               <h3 className="home-banner-review-name">- Jonathan A.</h3>
               <p className="home-banner-review-rating">4.5/5</p>
@@ -130,7 +185,9 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <h1 id="faq" className="home-title">Have Any Questions?</h1>
+        <h1 id="faq" className="home-title">
+          Have Any Questions?
+        </h1>
 
         <FAQ />
 

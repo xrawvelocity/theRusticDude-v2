@@ -39,20 +39,9 @@ export default class App extends Component {
             />
           </Link>
           <div className="navigation-links">
-            <Link
-              onClick={() => {
-                this.setState({ selected: "projects" });
-              }}
-              to="/projects"
-              className={`navigation-links_projects ${
-                this.state.selected === "projects" ||
-                window.location.href.includes("projects")
-                  ? "navigation-links_active"
-                  : null
-              }`}
-            >
+            <a href="#projects" className="navigation-links_projects">
               Projects
-            </Link>
+            </a>
 
             <a href="#faq" className="navigation-links_FAQ">
               FAQ
@@ -95,15 +84,9 @@ export default class App extends Component {
                 : "navigation-hamburger_active"
             }
           >
-            <Link
-              onClick={() => {
-                this.setState({ active: false, close: true });
-              }}
-              to="/projects"
-              className="navigation-hamburger_projects"
-            >
+            <a href="#projects" className="navigation-hamburger_projects">
               Projects
-            </Link>
+            </a>
             <a href="#contact" className="navigation-hamburger_contact">
               Contact
             </a>
@@ -112,28 +95,7 @@ export default class App extends Component {
             </a>
           </div>
         </nav>
-        <Fragment>
-          <Switch>
-            <Route exact path="/" render={(props) => <Home {...props} />} />
-            <Route
-              exact
-              path="/projects"
-              render={(props) => <Projects {...props} />}
-            />
-            <Route
-              exact
-              path="/contact"
-              render={(props) => <Contact {...props} />}
-            />
-            <Route exact path="/FAQ" render={(props) => <FAQ {...props} />} />
-
-            <Route
-              exact
-              path="/admin"
-              render={(props) => <Admin {...props} />}
-            />
-          </Switch>
-        </Fragment>
+        <Home />
         <footer className="footer">
           <div className="footer-links">
             <a

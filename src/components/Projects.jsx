@@ -28,8 +28,8 @@ export default class Projects extends Component {
           });
         });
         await this.setState({
-          projects: projects.sort((a,b)=>{
-              return b.date - a.date
+          projects: projects.sort((a, b) => {
+            return b.date - a.date;
           }),
         });
         console.log(this.state.projects);
@@ -51,14 +51,15 @@ export default class Projects extends Component {
             alt="project"
             className="projects-card_image"
           />
-          <h6 className="projects-card_title">{project.title}</h6>
-          <div className="projects-card-content">
-            <div className="projects-card-customer">
-              <p className="projects-card-customer_name">{project.name}</p>
+          <div className="projects-card_text">
+            <h6 className="projects-card_title">{project.title}</h6>
+            <div className="projects-card-content">
+              <div className="projects-card-customer">
+                <p className="projects-card-customer_name">{project.name}</p>
+              </div>
+              <p className="projects-card_review">{project.description}</p>
             </div>
-            <p className="projects-card_review">{project.description}</p>
           </div>
-          
         </div>
       );
     });

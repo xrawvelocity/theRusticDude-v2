@@ -6,9 +6,55 @@
   &-title {
     color: #fff;
     font-size: 5rem;
-    padding: 10rem 0;
+    padding: 5rem 0;
     width: 100%;
     text-align: center;
+  }
+
+  &-random {
+    background-color: #222;
+    margin-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  &-features {
+
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    
+    &-card {
+
+      width: 25%;
+      text-align: center;
+
+      @include respond(phone) {
+        width: 100%;
+        padding: 0 5%;
+      }
+      
+      &-icon {
+        color: $accent;
+        
+        @include respond(phone) {
+          margin-top: 3rem;
+        }
+      }
+
+      &-title {
+        font-size: 3.5rem;
+        padding: 2rem 0;
+      }
+
+      &-text {
+        padding: 2rem 0;
+      }
+    }
   }
 
   &-banner {
@@ -206,7 +252,7 @@
     display: flex;
     justify-content: space-around;
     height: 70vh;
-    padding: 0rem 10%;
+    padding: 0rem 10% 10rem;
 
     @include respond(tab-port) {
       font-weight: 800;
