@@ -102,7 +102,7 @@ export default class Home extends Component {
             </a> */}
           </div>
         </section>
-        <section className="home-main">
+        {/* <section className="home-main">
           <div className="home-cta">
             <div className="home-cta_text">
               Hi! My name is <strong>Claudia</strong> I love assisting our
@@ -110,14 +110,14 @@ export default class Home extends Component {
             </div>
             {/* <a href="#faq" className="home-cta_button">
               Frequently Asked Questions
-            </a> */}
+            </a>
           </div>
           <img
             src="../images/claudia4.png"
             alt="claudia"
             className="home-image1"
           />
-        </section>
+        </section> */}
         <div className="home-banner">
           <div className="home-banner-image_1 home-banner-image-container">
             <div className="home-banner-review">
