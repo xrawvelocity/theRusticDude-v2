@@ -38,8 +38,16 @@ export default class Navigation extends Component {
                         Projects
                     </a>
 
+                    <a href="#about" className="navigation-links_projects">
+                        About
+                    </a>
+
+                    <a href="#reviews" className="navigation-links_projects">
+                        Reviews
+                    </a>
+
                     <a href="#faq" className="navigation-links_FAQ">
-                        FAQ
+                        Questions
                     </a>
                     <a href="#contact" className="navigation-links_contact">
                         Contact
@@ -95,11 +103,20 @@ export default class Navigation extends Component {
                     >
                         Projects
                     </a>
+                    <a href="#about" className="navigation-hamburger_projects">
+                        About
+                    </a>
+                    <a
+                        href="#reviews"
+                        className="navigation-hamburger_projects"
+                    >
+                        Reviews
+                    </a>
                     <a href="#contact" className="navigation-hamburger_contact">
                         Contact
                     </a>
                     <a href="#faq" className="navigation-hamburger_FAQ">
-                        FAQ
+                        Questions
                     </a>
                 </div>
             </nav>

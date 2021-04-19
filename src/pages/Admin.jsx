@@ -2,9 +2,10 @@ import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
-import { TextField } from "@material-ui/core";
+import { Modal, TextField, Backdrop } from "@material-ui/core";
 
 import firebase from "firebase";
+import ProjectCard from "../components/ProjectCard";
 
 export default class Admin extends Component {
     state = {
@@ -75,29 +76,14 @@ export default class Admin extends Component {
         return this.state.projects.map((project) => {
             console.log(project);
             return (
-                <div
+                <ProjectCard
                     onClick={() => {
                         this.setState({ popup: project });
                     }}
-                    className="projects-card"
-                >
-                    <img
-                        src={project.image}
-                        alt="project"
-                        className="projects-card_image"
-                    />
-                    <h6 className="projects-card_title">{project.title}</h6>
-                    <div className="projects-card-content">
-                        <div className="projects-card-customer">
-                            <p className="projects-card-customer_name">
-                                {project.name}
-                            </p>
-                        </div>
-                        <p className="projects-card_review">
-                            {project.description}
-                        </p>
-                    </div>
-                </div>
+                    image={project.image}
+                    name={project.name}
+                    description={project.description}
+                />
             );
         });
     };
@@ -307,22 +293,22 @@ export default class Admin extends Component {
                                 />
                             </div>
                         ) : null}
-                        {this.state.popup !== "" && (
-                            <div className="projects-popup">
-                                <img
-                                    src={this.state.popup}
-                                    alt="project"
-                                    className="projects-popup_image"
-                                />
-                                <FontAwesomeIcon
-                                    onClick={() => {
-                                        this.setState({ popup: "" });
-                                    }}
-                                    icon={faTimes}
-                                    className="projects-popup_close"
-                                />
-                            </div>
-                        )}
+
+                        <Modal
+                            open={this.state.popup}
+                            onClose={() => this.setState({ popup: "" })}
+                            closeAfterTransition
+                            BackdropComponent={Backdrop}
+                            BackdropProps={{
+                                timeout: 500,
+                            }}
+                        >
+                            <img
+                                src={this.state.popup.image}
+                                alt="project"
+                                className="projects-popup_image"
+                            />
+                        </Modal>
                     </Fragment>
                 )}
             </div>

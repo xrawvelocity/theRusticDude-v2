@@ -9,6 +9,10 @@
         padding: 5rem 0;
         width: 100%;
         text-align: center;
+
+        @include respond(phone) {
+            font-size: 3.6rem;
+        }
     }
 
     &-random {
@@ -104,6 +108,7 @@
             &-name {
             }
             &-content {
+                text-align: left;
             }
             &-rating {
             }
@@ -162,16 +167,43 @@
     &-hero {
         position: relative;
 
-        &-cta {
+        @include respond(phone) {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
 
-            width: auto;
+        &-form {
+            position: absolute;
+            top: 20%;
+            left: 60%;
+            background-color: #00000023;
+            padding: 50px;
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+
+            animation: moveInRight 1.5s ease 1.25s;
+            animation-fill-mode: backwards;
+
+            transition: all 0.4s ease;
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 30%;
             transform: translate(-50%, -50%);
+            @include respond(phone) {
+                left: 50%;
+                align-items: center;
+            }
         }
 
         &-title {
@@ -183,6 +215,21 @@
             animation-fill-mode: backwards;
 
             transition: all 0.4s ease;
+        }
+
+        &-subtitle {
+            text-align: center;
+            font-size: 3rem;
+            color: $white;
+            margin-top: 2rem;
+            animation: moveInTop 1.5s ease 1.25s;
+            animation-fill-mode: backwards;
+
+            transition: all 0.4s ease;
+
+            @include respond(phone) {
+                margin-top: 3rem;
+            }
         }
 
         &-text {

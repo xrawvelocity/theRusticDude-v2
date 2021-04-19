@@ -9,7 +9,9 @@ export default class About extends Component {
     render() {
         return (
             <>
-                <h1 className="home-title">Meet The Team</h1>
+                <h1 id="about" className="home-title">
+                    Meet The Team
+                </h1>
                 <section className="home-main">
                     <img
                         src="../images/tito1.PNG"
@@ -18,8 +20,9 @@ export default class About extends Component {
                     />
                     <div className="home-cta">
                         <div className="home-cta_text">
-                            My name is Manuel and there's nothing that I'm more
-                            passionate about than working with my hands
+                            My name is <strong>Manuel</strong> and there's
+                            nothing that I'm more passionate about than working
+                            with my hands
                         </div>
                         {/* <Link to="/projects" className="home-cta_button">
                             Previous Projects
@@ -30,8 +33,9 @@ export default class About extends Component {
                 <section className="home-main">
                     <div className="home-cta">
                         <div className="home-cta_text">
-                            Hi! My name is Claudia and I love helping people be
-                            satisfied with our work
+                            Hi! My name is <strong>Claudia</strong> and I love
+                            helping people be satisfied with our work and
+                            service
                         </div>
                         {/* <Link to="/about" className="home-cta_button">
                             Learn More
