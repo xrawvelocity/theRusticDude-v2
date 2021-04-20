@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-
-import firebase from "firebase";
-import ProjectCard from "../components/ProjectCard";
 import { Backdrop, Modal } from "@material-ui/core";
+import firebase from "firebase";
+import React, { Component } from "react";
+
+import ProjectCard from "../components/ProjectCard";
 
 export default class Projects extends Component {
     state = {
